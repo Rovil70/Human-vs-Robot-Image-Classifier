@@ -17,7 +17,8 @@ app.add_middleware(
 )
 
 # Load model (use relative path for deployment!)
-model = tf.keras.models.load_model("human_robot_classifier_model.h5")
+model = tf.keras.models.load_model("backend/human_robot_classifier_model.h5")
+
 class_names = ['Human', 'Robot']
 
 @app.post("/predict")
